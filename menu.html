@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Sweet Delights</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🍰 Sweet Delights</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Our Delicious Cake Menu</h1>
+        <p style="text-align: center; color: #666;">Click on any cake image or button to order directly!</p>
+
+        <div class="cake-grid">
+
+            <!-- Pineapple -->
+            <div class="cake-card">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500" alt="Pineapple Cake" class="cake-img buy-trigger" data-name="Tropical Pineapple Cake" data-price="₹449">
+                <div class="cake-info">
+                    <div class="cake-flavor">Pineapple</div>
+                    <h3>Tropical Pineapple Supreme</h3>
+                    <p class="price">₹449</p>
+                    <button class="btn-primary buy-trigger" data-name="Tropical Pineapple Cake" data-price="₹449">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Strawberry -->
+            <div class="cake-card">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500" alt="Strawberry Cake" class="cake-img buy-trigger" data-name="Fresh Strawberry Delight" data-price="₹499">
+                <div class="cake-info">
+                    <div class="cake-flavor">Strawberry</div>
+                    <h3>Fresh Strawberry Bliss</h3>
+                    <p class="price">₹499</p>
+                    <button class="btn-primary buy-trigger" data-name="Fresh Strawberry Delight" data-price="₹499">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Chocolate -->
+            <div class="cake-card">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Chocolate Cake" class="cake-img buy-trigger" data-name="Dark Chocolate Truffle" data-price="₹599">
+                <div class="cake-info">
+                    <div class="cake-flavor">Chocolate</div>
+                    <h3>Dark Chocolate Truffle</h3>
+                    <p class="price">₹599</p>
+                    <button class="btn-primary buy-trigger" data-name="Dark Chocolate Truffle" data-price="₹599">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Vanilla -->
+            <div class="cake-card">
+                <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=500" alt="Vanilla Cake" class="cake-img buy-trigger" data-name="Classic Vanilla Bean" data-price="₹399">
+                <div class="cake-info">
+                    <div class="cake-flavor">Vanilla</div>
+                    <h3>Classic Vanilla Bean</h3>
+                    <p class="price">₹399</p>
+                    <button class="btn-primary buy-trigger" data-name="Classic Vanilla Bean" data-price="₹399">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Butterscotch -->
+            <div class="cake-card">
+                <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?w=500" alt="Butterscotch Cake" class="cake-img buy-trigger" data-name="Golden Butterscotch Crunch" data-price="₹479">
+                <div class="cake-info">
+                    <div class="cake-flavor">Butterscotch</div>
+                    <h3>Butterscotch Crunch</h3>
+                    <p class="price">₹479</p>
+                    <button class="btn-primary buy-trigger" data-name="Golden Butterscotch Crunch" data-price="₹479">Order Now</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Order Modal Pop-Up -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 style="margin-bottom: 10px;">Place Your Order</h2>
+            <p id="selectedCakeText" style="color: #d9534f; font-weight: bold; margin-bottom: 20px;"></p>
+            
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" id="custName" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number *</label>
+                    <input type="tel" id="custPhone" required placeholder="+91 98765 43210">
+                </div>
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" id="custEmail" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Delivery Address *</label>
+                    <textarea id="custAddress" rows="3" required placeholder="Street address, City, PIN"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Confirm & Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sweet Delights Bakery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
